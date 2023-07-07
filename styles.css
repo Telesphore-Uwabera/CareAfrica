@@ -1,0 +1,84 @@
+/* CSS to style the sidebar and headings */
+.sidebar {
+    width: 100%;
+    /* Adjust width as needed */
+    background-color: #f1f1f1;
+    /* Adjust background color as needed */
+    padding: 10px;
+    /* Adjust padding as needed */
+    display: flex;
+    /* Enable flexbox layout */
+    flex-direction: row;
+    /* Arrange items horizontally */
+}
+body {
+    background-image: url("WHO_TM-033.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+.sidebar button {
+    border: none;
+    background-color: transparent;
+    padding: 20px;
+    /* Adjust padding as needed */
+    font-size: 18px;
+    /* Adjust font size as needed */
+    font-weight: bold;
+    /* Adjust font weight as needed */
+    cursor: pointer;
+}
+
+.sidebar button:focus {
+    background-color: #ccc;
+    /* Adjust selected button background color as needed */
+}
+
+img {
+    width: 100%;
+    height: 10vh;
+    object-fit: cover;
+}
+.sidebar {
+    background-color: red;
+}
+.Introduction {
+    display: flex;
+    height:1200 px;
+  }
+  
+  .Introduction-content {
+    width: 50%;
+    float: left;
+    clear: left;
+  }
+  
+  .Video {
+    width: 50%;
+    float: right;
+    clear: right;
+  }
+  
+  .Video video {
+    width: 100%;
+    height: auto;
+    cursor: pointer;
+  }  
+footer {
+    padding: 20px;
+}
+.footer-row img {
+    margin-right: 40px;
+    width: 80px;
+    height: 40px;
+}
+
+.footer-block {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.footer-block a {
+    margin-right: 10px;
+}
