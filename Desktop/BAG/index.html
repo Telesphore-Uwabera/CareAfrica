@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us - BAG</title>
+  <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+  <header>
+    <nav>
+      <ul>
+        <button>
+          <img src="download__11_-removebg-preview (1).png" alt="BAG" height="20px" width="20px">
+      </button>
+        <li><a href="about_us.html">About Us</a></li>
+        <li><a href="updates.html">Updates</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="publications.html">Publications</a></li>
+        <li><a href="contacts.html">Contacts</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section id="about-us">
+    <div id="about-us-text">
+      <h1>About Us</h1>
+      <p>The mission:</p>
+      <p>At BAG, we envision a world where every young talent, regardless of background or resources, has a clear pathway to professional success.</p>
+      <p>The vision:</p>
+      <p>Our mission extends beyond skill-building. We are also committed to forging strong industry partnerships, ensuring that the training we offer aligns with the evolving demands of the global job market.</p>
+      <p>By bridging the skills gap, BAG aims to catalyze socio-economic growth in Rwanda, empowering the next generation of professionals to drive innovation, foster community development, and make impactful contributions to the global workforce.</p>
+    </div>
+
+    <div id="about-us-images">
+      <img src="download__3_-removebg-preview (1).png" alt="Image 1">
+      <img src="download (14).png" alt="Image 2">
+    </div>
+  </section>
+
+  <section id="feedback">
+    <h2>Provide Feedback</h2>
+    <form id="feedback-form">
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" required><br>
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required><br>
+      <label for="feedback-text">Feedback:</label>
+      <textarea id="feedback-text" name="feedback-text" required></textarea><br>
+      <button type="submit">Submit</button>
+    </form>
+  </section>
+
+  <section id="success" style="display: none;">
+    <h2>Feedback Received</h2>
+    <p>Thank you for your feedback! We have received your input.</p>
+    <p>Would you like to submit additional feedback?</p>
+    <button id="additional-feedback-button">Submit Additional Feedback</button>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>
