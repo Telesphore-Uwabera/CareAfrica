@@ -1,22 +1,108 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-  <meta name="description" content="CareAfrica - Community-Driven Conservation Awareness Platform" />
-  <meta name="author" content="Telesphore Uwabera" />
+  <link rel="icon" type="image/jpg" href="images/CareAfrica.jpg">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>CareAfrica - Conservation Awareness Platform</title>
-  <!-- Bootstrap CSS (You can replace this with the link to your preferred CSS framework) -->
-  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-  <!-- Custom styles for this template -->
-  <link href="styles.css" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    /* CSS for header alignment */
+    header {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      text-align: center;
+    }
+    
+    /* CSS for content paragraph */
+    main p {
+      text-align: justify;
+      margin: 20px;
+    }
+    
+  </style>
 </head>
 <body>
-  <noscript>You need to enable JavaScript to run this app.</noscript>
-  <div id="root"></div>
-  <!-- Bootstrap JS (You can replace this with the link to your preferred JS framework) -->
-  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-pzjw8P+7N1Eu2/QDpDEd8ZQ6QTa8X5gg/3g9nLsgYFUKTn6EIsIEp6IBoTJS3+K" crossorigin="anonymous"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8sh+WyL/J6Adomj2iibF5cMFCIjEBK5oD1Bh9t" crossorigin="anonymous"></script>
+  <!-- Landing Page -->
+  <header>
+    <img src="images/CareAfrica.jpg" alt="CareAfrica Logo">
+    <nav>
+      <ul>
+        <li><a href="userlogin.html" id="access-courses-link"><h1>Access Courses</h1></a></li>
+        <li><a href="report.html" id="submit-report-link"><h1>Submit Report</h1></a></li>
+        <li><a href="#" id="forums-link"><h1>Community Forum</h1></a></li>
+      </ul>
+    </nav>
+    <div><h1>Welcome to CareAfrica</h1>
+    <h2>A platform dedicated to wildlife conservation awareness</h2>
+    </div>
+  </header>
+  <main>
+    <section>
+      <h2>The Community-Driven Conservation Awareness (CareAfrica) Platform is a comprehensive software solution designed to address existing challenges in wildlife conservation in Rwanda by fostering active community engagement. The platform aims to empower local communities, raise awareness about wildlife conservation, and encourage collaborative efforts to protect and preserve Rwanda's diverse ecosystems.</h2>
+      <div id="main-content">
+        <div class="content-with-form">
+          <div class="content">
+            <img id="rotating-image" src="images/image1.jpg" alt="Image">
+          </div>
+          <div class="form">
+            <h1>Research Request</h1>
+            <form id="research-request-form">
+              <label for="email">Email:</label>
+            <input type="email" id="email" required>
+              <label for="research-topic"><h3>Research Topic:</h3></label>
+              <input type="text" id="research-topic" required>
+              <label for="research-description"><h3>Description:</h3></label>
+              <textarea id="research-description" rows="1" required></textarea>
+              <button type="submit"><h3>Submit Request</h3></button>
+            </form>
+            <p>We save wildlife!</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- User Registration -->
+    <section id="registration">
+      <div class="video-container">
+        <video src="videos/video1.mp4" autoplay muted loop></video>
+        <div class="registration-form">
+          <p>Do you want to take part in wildlife conservation?</p>
+          <h2>Register here</h2>
+          <form id="registration-form">
+            <label for="username">Username:</label>
+            <input type="text" id="username" required>
+    
+            <label for="email">Email:</label>
+            <input type="email" id="email" required>
+    
+            <label for="password">Password:</label>
+            <input type="password" id="password" required>
+    
+            <button type="submit">Register</button>
+          </form>
+        </div>
+      </div>
+    </section>
+     <!-- Navigation Links -->
+     <nav>
+      <ul>
+        <li><a href="userlogin.html" id="access-courses-link"><h1>Access Courses</h1></a></li>
+        <li><a href="report.html" id="submit-report-link"><h1>Submit Report</h1></a></li>
+        <li><a href="https://earth.google.com/web/" id="view-map-link"><h1>View Conservation Map</h1></a></li>
+        <li><a href="#" id="forums-link"><h1>Community Forum</h1></a></li>
+      </ul>
+    </nav>
+   
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2024 CareAfrica - All rights reserved</p>
+  </footer>
+
+  <!-- JavaScript -->
+  <script src="scripts.js"></script>
 </body>
 </html>
