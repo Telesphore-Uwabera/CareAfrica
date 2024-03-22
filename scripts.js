@@ -111,31 +111,11 @@ console.log('Park and forest locations:');
 locations.forEach(location => {
   console.log(location.name + ': ' + location.location.lat + ', ' + location.location.lng);
 });
-// JavaScript for rotating images with fade-in/out animation
-const rotatingImages = ["images/image1.jpg", "images/image2.jpg", "images/image3.jpg", "images/image4.jpg", "images/image5.jpg", "images/image6.jpg", "images/image7.jpg"];
-let currentIndex = 0;
-
-function rotateImage() {
-  const rotatingImage = document.getElementById("rotating-image");
-  const nextIndex = (currentIndex + 1) % rotatingImages.length;
-  
-  // Fade out the current image
-  rotatingImage.style.opacity = 0;
-  
-  // Load the next image
-  const nextImage = new Image();
-  nextImage.onload = function() {
-    rotatingImage.src = rotatingImages[nextIndex];
-    // Fade in the next image
-    rotatingImage.style.opacity = 1;
-  };
-  nextImage.src = rotatingImages[nextIndex];
-  
-  currentIndex = nextIndex;
-}
-
-// Initially load the first image
-const rotatingImage = document.getElementById("rotating-image");
-rotatingImage.src = rotatingImages[currentIndex];
-
-setInterval(rotateImage, 3000); // Rotate images every 3 seconds
+ // Initialize the carousel when the document is ready
+ document.addEventListener("DOMContentLoaded", function() {
+  var carousel = document.querySelector("#carouselExampleIndicators");
+  var carouselInstance = new bootstrap.Carousel(carousel, {
+    interval: 3000, // Set interval time in milliseconds (e.g., 2000ms for 2 seconds)
+    pause: "hover" // Pause on mouse hover
+  });
+});

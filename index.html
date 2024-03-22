@@ -5,6 +5,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>CareAfrica - Conservation Awareness Platform</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
   <style>
     /* CSS for header alignment */
@@ -22,87 +24,152 @@
       margin: 20px;
     }
     
+    /* Add custom styles here */
   </style>
 </head>
 <body>
-  <!-- Landing Page -->
-  <header>
-    <img src="images/CareAfrica.jpg" alt="CareAfrica Logo">
-    <nav>
-      <ul>
-        <li><a href="userlogin.html" id="access-courses-link"><h1>Access Courses</h1></a></li>
-        <li><a href="report.html" id="submit-report-link"><h1>Submit Report</h1></a></li>
-        <li><a href="#" id="forums-link"><h1>Community Forum</h1></a></li>
-      </ul>
-    </nav>
-    <div><h1>Welcome to CareAfrica</h1>
-    <h2>A platform dedicated to wildlife conservation awareness</h2>
-    </div>
+ <!-- Navigation Bar -->
+ <nav class="navbar navbar-expand-lg navbar-dark" style="background-image: url('images/image2.jpg');">
+  <a class="navbar-brand" href="#">
+    <img src="images/CareAfrica.jpg" alt="CareAfrica Logo" height="50">
+  </a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav ml-auto">
+      <li class="nav-item">
+        <a class="nav-link" href="userlogin.html">Access Courses</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="report.html">Submit Report</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Community Forum</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">View Conservation Map</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+  <!-- Header -->
+  <header class="text-center my-5">
+    <h1>Welcome to CareAfrica</h1>
+    <h2 class="mb-4">A platform dedicated to wildlife conservation awareness</h2>
   </header>
-  <main>
-    <section>
-      <h2>The Community-Driven Conservation Awareness (CareAfrica) Platform is a comprehensive software solution designed to address existing challenges in wildlife conservation in Rwanda by fostering active community engagement. The platform aims to empower local communities, raise awareness about wildlife conservation, and encourage collaborative efforts to protect and preserve Rwanda's diverse ecosystems.</h2>
-      <div id="main-content">
-        <div class="content-with-form">
-          <div class="content">
-            <img id="rotating-image" src="images/image1.jpg" alt="Image">
+
+  <!-- Main Content -->
+  <main class="container">
+    <!-- Content Section -->
+    <section class="mb-5">
+      <div class="row">
+        <div class="col-md-6">
+          <h2>The Community-Driven Conservation Awareness (CareAfrica) Platform</h2>
+          <p class="text-justify">The Community-Driven Conservation Awareness (CareAfrica) Platform is a comprehensive software solution designed to address existing challenges in wildlife conservation in Rwanda by fostering active community engagement. The platform aims to empower local communities, raise awareness about wildlife conservation, and encourage collaborative efforts to protect and preserve Rwanda's diverse ecosystems.</p>
+        </div>
+        <div class="col-md-6">
+          <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+            <ol class="carousel-indicators">
+              <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+              <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+              <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+              <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
+              <li data-target="#carouselExampleIndicators" data-slide-to="4"></li>
+              <li data-target="#carouselExampleIndicators" data-slide-to="5"></li>
+              <li data-target="#carouselExampleIndicators" data-slide-to="6"></li>
+              <li data-target="#carouselExampleIndicators" data-slide-to="7"></li>
+            </ol>
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="images/image1.jpg" class="d-block w-100" alt="Image 1">
+              </div>
+              <div class="carousel-item">
+                <img src="images/image2.jpg" class="d-block w-100" alt="Image 2">
+              </div>
+              <div class="carousel-item">
+                <img src="images/image3.jpg" class="d-block w-100" alt="Image 3">
+              </div>
+              <div class="carousel-item">
+                <img src="images/image4.jpg" class="d-block w-100" alt="Image 4">
+              </div>
+              <div class="carousel-item">
+                <img src="images/image5.jpg" class="d-block w-100" alt="Image 5">
+              </div>
+              <div class="carousel-item">
+                <img src="images/image6.jpg" class="d-block w-100" alt="Image 6">
+              </div>
+              <div class="carousel-item">
+                <img src="images/image7.jpg" class="d-block w-100" alt="Image 7">
+              </div>
+              <div class="carousel-item">
+                <img src="images/image8.jpg" class="d-block w-100" alt="Image 8">
+              </div>
+            </div>
           </div>
-          <div class="form">
-            <h1>Research Request</h1>
-            <form id="research-request-form">
-              <label for="email">Email:</label>
-            <input type="email" id="email" required>
-              <label for="research-topic"><h3>Research Topic:</h3></label>
-              <input type="text" id="research-topic" required>
-              <label for="research-description"><h3>Description:</h3></label>
-              <textarea id="research-description" rows="1" required></textarea>
-              <button type="submit"><h3>Submit Request</h3></button>
+        </div>
+      </div>
+    </section>
+    <section class="mb-5">
+      <div class="row">
+        <div class="col-md-6">
+          <video src="videos/video1.mp4" autoplay muted loop class="w-100"></video>
+        </div>
+        <div class="col-md-6">
+          <div class="registration-form">
+            <p>Do you want to take part in wildlife conservation?</p>
+            <h2>Register here</h2>
+            <form id="registration-form">
+              <div class="form-group">
+                <label for="username">Username:</label>
+                <input type="text" id="username" class="form-control" required>
+              </div>
+              <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" class="form-control" required>
+              </div>
+              <div class="form-group">
+                <label for="password">Password:</label>
+                <input type="password" id="password" class="form-control" required>
+              </div>
+              <button type="submit" class="btn btn-primary">Register</button>
             </form>
-            <p>We save wildlife!</p>
           </div>
         </div>
       </div>
-    </section>
-    <!-- User Registration -->
-    <section id="registration">
-      <div class="video-container">
-        <video src="videos/video1.mp4" autoplay muted loop></video>
-        <div class="registration-form">
-          <p>Do you want to take part in wildlife conservation?</p>
-          <h2>Register here</h2>
-          <form id="registration-form">
-            <label for="username">Username:</label>
-            <input type="text" id="username" required>
-    
-            <label for="email">Email:</label>
-            <input type="email" id="email" required>
-    
-            <label for="password">Password:</label>
-            <input type="password" id="password" required>
-    
-            <button type="submit">Register</button>
-          </form>
-        </div>
+    </section> 
+    <section>
+      <!-- Research Request Submission -->
+      <div class="research-request" style="background-image: url('images/image2.jpg'); background-size: cover; padding: 20px; border-radius: 20px;">
+        <h1 class="text-center">Submit Research Request</h1>
+        <form id="research-request-form">
+          <div class="form-group">
+            <label for="research-topic"><h2>Research Topic:</h2></label>
+            <input type="text" id="research-topic" class="form-control" required>
+          </div>
+          <div class="form-group">
+            <label for="research-description"><h2>Description:</h2></label>
+            <textarea id="research-description" class="form-control" rows="4" required></textarea>
+          </div>
+          <div class="text-center">
+            <button type="submit" class="btn btn-success">Submit Request</button>
+          </div>
+        </form>
       </div>
-    </section>
-     <!-- Navigation Links -->
-     <nav>
-      <ul>
-        <li><a href="userlogin.html" id="access-courses-link"><h1>Access Courses</h1></a></li>
-        <li><a href="report.html" id="submit-report-link"><h1>Submit Report</h1></a></li>
-        <li><a href="https://earth.google.com/web/" id="view-map-link"><h1>View Conservation Map</h1></a></li>
-        <li><a href="#" id="forums-link"><h1>Community Forum</h1></a></li>
-      </ul>
-    </nav>
-   
+    </section>   
   </main>
 
   <!-- Footer -->
-  <footer>
+  <footer class="text-center py-4">
     <p>&copy; 2024 CareAfrica - All rights reserved</p>
   </footer>
-
-  <!-- JavaScript -->
+<!-- Bootstrap JS and jQuery (needed for Bootstrap components) -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
   <script src="scripts.js"></script>
+  <!-- Bootstrap JavaScript -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
