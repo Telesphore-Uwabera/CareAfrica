@@ -60,38 +60,38 @@
 </head>
 <body>
   <section id="registration">
-      <div class="container">
-        <p>Do you want to take part in wildlife conservation?</p>
-        <h2>Register here</h2>
-        <form id="registration-form">
-          <label for="username">Username:</label>
-          <input type="text" id="username" required>
-  
-          <label for="email">Email:</label>
-          <input type="email" id="email" required>
-  
-          <label for="password">Password:</label>
-          <input type="password" id="password" required>
-  
-          <button type="submit">Register</button>
-        </form>
-      </div>
-    </div>
-  </section>
   <div class="container">
-    <p>Do   you want to take conservation courses?</p>
-    <h2>Login here</h2>
-    <form id="loginForm" action="userlogin.php" method="post">
-      <div class="form-group">
-        <label for="username">Username or Email:</label>
-        <input type="text" id="username" name="username" required>
-      </div>
-      <div class="form-group">
-        <label for="password">Password:</label>
-        <input type="password" id="password" name="password" required>
-      </div>
-      <button type="submit">Login</button>
+    <p>Do you want to take part in wildlife conservation?</p>
+    <h2>Register here</h2>
+    <form id="registration-form" name="registration-form" netlify>
+      <label for="username">Username:</label>
+      <input type="text" id="username" name="username" required>
+      
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required>
+      
+      <label for="password">Password:</label>
+      <input type="password" id="password" name="password" required>
+      
+      <button type="submit">Register</button>
     </form>
   </div>
+</section>
+
+<div class="container">
+  <p>Do you want to take conservation courses?</p>
+  <h2>Login here</h2>
+  <form id="loginForm" name="login-form" netlify>
+    <div class="form-group">
+      <label for="login-username">Username or Email:</label>
+      <input type="text" id="login-username" name="login-username" required>
+    </div>
+    <div class="form-group">
+      <label for="login-password">Password:</label>
+      <input type="password" id="login-password" name="login-password" required>
+    </div>
+    <button type="submit">Login</button>
+  </form>
+</div>
 </body>
 </html>
