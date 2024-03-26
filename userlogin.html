@@ -59,39 +59,52 @@
   </style>
 </head>
 <body>
-  <section id="registration">
-  <div class="container">
-    <p>Do you want to take part in wildlife conservation?</p>
-    <h2>Register here</h2>
-    <form id="registration-form" name="registration-form" netlify>
-      <label for="username">Username:</label>
-      <input type="text" id="username" name="username" required>
-      
-      <label for="email">Email:</label>
-      <input type="email" id="email" name="email" required>
-      
-      <label for="password">Password:</label>
-      <input type="password" id="password" name="password" required>
-      
-      <button type="submit">Register</button>
-    </form>
+ <!-- Registration Section -->
+<section class="mb-5">
+  <div class="row">
+    <div class="col-md-6">
+      <video src="video1.mp4" autoplay muted loop class="w-100"></video>
+    </div>
+    <div class="col-md-6">
+      <div class="registration-form">
+        <p>Do you want to take part in wildlife conservation?</p>
+        <h2>Register here</h2>
+        <form id="registration-form" name="registration-form" netlify>
+          <div class="form-group">
+            <label for="username">Username:</label>
+            <input type="text" id="username" class="form-control" required>
+          </div>
+          <div class="form-group">
+            <label for="email">Email:</label>
+            <input type="email" id="email" class="form-control" required>
+          </div>
+          <div class="form-group">
+            <label for="password">Password:</label>
+            <input type="password" id="password" class="form-control" required>
+          </div>
+          <button type="submit" class="btn btn-primary">Register</button>
+        </form>
+      </div>
+    </div>
   </div>
 </section>
 
+<!-- Login Section -->
 <div class="container">
   <p>Do you want to take conservation courses?</p>
   <h2>Login here</h2>
   <form id="loginForm" name="login-form" netlify>
     <div class="form-group">
       <label for="login-username">Username or Email:</label>
-      <input type="text" id="login-username" name="login-username" required>
+      <input type="text" id="login-username" name="login-username" class="form-control" required>
     </div>
     <div class="form-group">
       <label for="login-password">Password:</label>
-      <input type="password" id="login-password" name="login-password" required>
+      <input type="password" id="login-password" name="login-password" class="form-control" required>
     </div>
-    <button type="submit">Login</button>
+    <button type="submit" class="btn btn-primary">Login</button>
   </form>
 </div>
+
 </body>
 </html>
