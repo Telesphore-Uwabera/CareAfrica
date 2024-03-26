@@ -1,22 +1,11 @@
-// Define a JavaScript object to store user data
+// Define an array to store user data
 var users = [];
 
 // Function to validate password strength
 function isPasswordStrong(password) {
   // Define regular expressions for password strength
-  var uppercaseRegex = /[A-Z]/;
-  var lowercaseRegex = /[a-z]/;
-  var digitRegex = /\d/;
-  var specialCharRegex = /[!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]/;
-
-  // Check if the password meets the minimum requirements
-  return (
-    password.length >= 8 && // At least 8 characters long
-    uppercaseRegex.test(password) && // Contains at least one uppercase letter
-    lowercaseRegex.test(password) && // Contains at least one lowercase letter
-    digitRegex.test(password) && // Contains at least one digit
-    specialCharRegex.test(password) // Contains at least one special character
-  );
+  var passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
+  return passwordRegex.test(password);
 }
 
 // Function to handle user registration
@@ -54,7 +43,7 @@ function loginUser(usernameOrEmail, password) {
   return { success: true, user: user };
 }
 
-// Function to handle research request
+// Function to handle research request submission
 function submitResearchRequest(user, researchTopic) {
   // Perform research request handling logic here
   console.log(user.username + ' submitted a research request on ' + researchTopic);
@@ -66,7 +55,7 @@ function submitReport(user, reportContent) {
   educationalResources.reports.push({ user: user.username, content: reportContent });
 }
 
-// Define a JavaScript object to store educational resources
+// Define an object to store educational resources
 var educationalResources = {
   courses: [
     { title: 'Introduction to Wildlife Conservation', url: 'https://example.com/course1' },
@@ -76,7 +65,7 @@ var educationalResources = {
   reports: []
 };
 
-// Define a JavaScript object to store park and forest locations
+// Define an array to store park and forest locations
 var parkLocations = [
   { name: 'National Park A', location: { lat: 123.456, lng: 789.012 } },
   { name: 'Nature Reserve B', location: { lat: 456.789, lng: 123.456 } },
@@ -111,11 +100,61 @@ console.log('Park and forest locations:');
 locations.forEach(location => {
   console.log(location.name + ': ' + location.location.lat + ', ' + location.location.lng);
 });
- // Initialize the carousel when the document is ready
- document.addEventListener("DOMContentLoaded", function() {
+
+// Initialize the carousel when the document is ready
+document.addEventListener("DOMContentLoaded", function() {
   var carousel = document.querySelector("#carouselExampleIndicators");
   var carouselInstance = new bootstrap.Carousel(carousel, {
     interval: 3000, // Set interval time in milliseconds (e.g., 2000ms for 2 seconds)
     pause: "hover" // Pause on mouse hover
   });
+});
+
+// Function to handle registration form submission
+document.getElementById("registration-form").addEventListener("submit", function(event) {
+  event.preventDefault();
+  
+  // Get input values
+  var username = document.getElementById("username").value;
+  var email = document.getElementById("email").value;
+  var password = document.getElementById("password").value;
+
+  // Perform user registration
+  var registrationResult = registerUser(username, email, password);
+
+  // Display registration result
+  if (registrationResult.success) {
+    alert(registrationResult.message);
+    // Redirect to login section
+    window.location.href = "#login-section";
+  } else {
+    alert(registrationResult.message);
+  }
+
+  // Reset form
+  event.target.reset();
+});
+
+// Function to handle login form submission
+document.getElementById("loginForm").addEventListener("submit", function(event) {
+  event.preventDefault();
+
+  // Get input values
+  var loginUsername = document.getElementById("login-username").value;
+  var loginPassword = document.getElementById("login-password").value;
+
+  // Perform user login
+  var loginResult = loginUser(loginUsername, loginPassword);
+
+  // Display login result
+  if (loginResult.success) {
+    alert("Login successful!");
+    // Redirect to conservation courses or other protected pages
+    window.location.href = "conservation-courses.html";
+  } else {
+    alert(loginResult.message);
+  }
+
+  // Reset form
+  event.target.reset();
 });
