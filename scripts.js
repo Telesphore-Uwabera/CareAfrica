@@ -82,34 +82,6 @@ function getParkLocations() {
   return parkLocations;
 }
 
-// Example usage of the functions
-// Submit a report
-var user = { username: 'john_doe' }; // Assume the user is logged in
-submitReport(user, 'Report content goes here');
-
-// Get available courses
-var courses = getCourses();
-console.log('Available courses:');
-courses.forEach(course => {
-  console.log(course.title + ': ' + course.url);
-});
-
-// Get park locations
-var locations = getParkLocations();
-console.log('Park and forest locations:');
-locations.forEach(location => {
-  console.log(location.name + ': ' + location.location.lat + ', ' + location.location.lng);
-});
-
-// Initialize the carousel when the document is ready
-document.addEventListener("DOMContentLoaded", function() {
-  var carousel = document.querySelector("#carouselExampleIndicators");
-  var carouselInstance = new bootstrap.Carousel(carousel, {
-    interval: 3000, // Set interval time in milliseconds (e.g., 2000ms for 2 seconds)
-    pause: "hover" // Pause on mouse hover
-  });
-});
-
 // Function to handle registration form submission
 document.getElementById("registration-form").addEventListener("submit", function(event) {
   event.preventDefault();
@@ -150,7 +122,7 @@ document.getElementById("loginForm").addEventListener("submit", function(event) 
   if (loginResult.success) {
     alert("Login successful!");
     // Redirect to conservation courses or other protected pages
-    window.location.href = "conservation-courses.html";
+    window.location.href = "courses.html";
   } else {
     alert(loginResult.message);
   }
