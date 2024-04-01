@@ -1,11 +1,121 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Welcome to the conservation courses!</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Conservation Courses</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    /* Additional styles can be added here */
+    .course-card {
+      margin-bottom: 20px;
+      position: relative;
+    }
+    .course-card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 10px;
+      cursor: pointer;
+    }
+    .course-card:hover img {
+      filter: brightness(80%); /* Reduce brightness on hover */
+    }
+    .course-card .overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 255, 0, 0.5); /* Green overlay with transparency */
+      border-radius: 10px;
+      opacity: 0; /* Initially hidden */
+      transition: opacity 0.3s ease; /* Add transition for smooth effect */
+    }
+    .course-card:hover .overlay {
+      opacity: 1; /* Show overlay on hover */
+    }
+    .course-card .card-body {
+      position: relative;
+      z-index: 1; /* Ensure card body is above overlay */
+    }
+    .animate-scale {
+      animation: scaleAnim 1.5s ease infinite alternate;
+    }
+
+    @keyframes scaleAnim {
+      0% {
+        transform: scale(1);
+      }
+      100% {
+        transform: scale(1.1);
+      }
+    }
+  </style>
 </head>
 <body>
-    
+  <div class="container">
+    <h1 class="text-center mt-5 mb-4 animate-scale">Welcome To Conservation Courses</h1>
+    <div class="row">
+      <!-- Sample Course 1 -->
+      <div class="col-md-6">
+        <div class="card course-card">
+          <a href="course1.html">
+            <img src="image1.jpg" alt="Course 1">
+            <div class="overlay"></div> <!-- Overlay for hover effect -->
+          </a>
+          <div class="card-body">
+            <h5 class="card-title">Introduction to Wildlife Conservation</h5>
+            <p class="card-text">Learn the basics of wildlife conservation and its importance in preserving biodiversity.</p>
+          </div>
+        </div>
+      </div>
+      <!-- Sample Course 2 -->
+      <div class="col-md-6">
+        <div class="card course-card">
+          <a href="course2.html">
+            <img src="image2.jpg" alt="Course 2">
+            <div class="overlay"></div> <!-- Overlay for hover effect -->
+          </a>
+          <div class="card-body">
+            <h5 class="card-title">Conservation Biology Fundamentals</h5>
+            <p class="card-text">Explore the fundamental principles of conservation biology and its applications in wildlife management.</p>
+          </div>
+        </div>
+      </div>
+      <!-- Sample Course 3 -->
+      <div class="col-md-6">
+        <div class="card course-card">
+          <a href="course3.html">
+            <img src="image3.jpg" alt="Course 3">
+            <div class="overlay"></div> <!-- Overlay for hover effect -->
+          </a>
+          <div class="card-body">
+            <h5 class="card-title">Wildlife Management Techniques</h5>
+            <p class="card-text">Discover various techniques used in wildlife management and conservation efforts.</p>
+          </div>
+        </div>
+      </div>
+      <!-- Sample Course 4 -->
+      <div class="col-md-6">
+        <div class="card course-card">
+          <a href="course4.html">
+            <img src="image4.jpg" alt="Course 4">
+            <div class="overlay"></div> <!-- Overlay for hover effect -->
+          </a>
+          <div class="card-body">
+            <h5 class="card-title">Endangered Species Protection</h5>
+            <p class="card-text">Learn about endangered species and strategies for their protection and conservation.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bootstrap JS and jQuery (needed for Bootstrap components) -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 </html>
