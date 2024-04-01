@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Community Forum - CareAfrica</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    /* Additional styles can be added here */
+    body {
+      background-color: #f8f9fa; /* Light gray background */
+      font-family: Arial, sans-serif; /* Default font family */
+    }
+    .container {
+      padding: 20px; /* Add padding to content */
+    }
+    .page-title {
+      text-align: center; /* Center-align page title */
+      margin-top: 50px; /* Add space above page title */
+    }
+    .forum-post {
+      background-color: #fff; /* White background for forum posts */
+      border-radius: 10px; /* Rounded corners for forum posts */
+      padding: 20px; /* Add padding to forum posts */
+      margin-bottom: 20px; /* Add space between forum posts */
+    }
+    .event-preview {
+      background-color: #f8f9fa; /* Light gray background for event previews */
+      border-radius: 10px; /* Rounded corners for event previews */
+      padding: 20px; /* Add padding to event previews */
+      margin-bottom: 20px; /* Add space between event previews */
+      transition: transform 0.3s; /* Add transition for smooth hover effect */
+    }
+    .event-preview:hover {
+      transform: translateY(-5px); /* Move the card up slightly on hover */
+    }
+    .event-preview img {
+      width: 100%;
+      height: 200px; /* Set the height of the images */
+      object-fit: cover; /* Maintain aspect ratio and cover container */
+      border-radius: 10px; /* Rounded corners for event preview images */
+      margin-bottom: 10px; /* Add space below event preview images */
+      transition: filter 0.3s; /* Add transition for hover effect */
+    }
+    .event-preview:hover img {
+      filter: brightness(90%); /* Reduce brightness on hover */
+    }
+    .event-preview h3 {
+      color: green; /* Change text color to green */
+    }
+    .event-preview .btn-primary {
+      background-color: #007bff; /* Blue button color */
+      border-color: #007bff; /* Blue border color */
+    }
+    .event-preview .btn-primary:hover {
+      background-color: #28a745; /* Green button color on hover */
+      border-color: #28a745; /* Green border color on hover */
+    }
+  </style>
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <!-- Navbar content -->
+  </nav>
+  <div class="container">
+    <h1 class="page-title">Community Forum</h1>
+    
+    <!-- Recent Updates -->
+    <div class="forum-post">
+      <h2>Recent Updates</h2>
+      <p>Afforestation and Reafforestation in Kinigi, Rwanda...</p>
+      <a href="event3.html" class="btn btn-primary">Read More</a>
+      <p>Posted by: Telesphore | 01/04/2024 and 09:52:09</p>
+      <img src="image7.jpg" alt="image7" width="300px" height="300px"/>
+    </div>
+    
+    <!-- Event Previews -->
+    <h2 class="mt-4">Upcoming Events</h2>
+    <div class="row">
+      <div class="col-md-6">
+        <div class="event-preview">
+          <img src="image4.jpg" alt="Event 1">
+          <h3>Kwita Izina Event</h3>
+          <p>Gorilla Naming Ceremony is the special program in conservation...</p>
+          <a href="event1.html" class="btn btn-primary">Read More</a>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="event-preview">
+          <img src="image2.jpg" alt="Event 2">
+          <h3>Akagera Tour Event</h3>
+          <p>In Eastern province of Rwanda we have...</p>
+          <a href="event2.html" class="btn btn-primary">Read More</a>
+        </div>
+      </div>
+    </div>
+    
+    <!-- More event previews go here -->
+    
+  </div>
+
+  <!-- Bootstrap JS and jQuery (needed for Bootstrap components) -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
