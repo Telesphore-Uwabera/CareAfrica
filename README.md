@@ -38,4 +38,4 @@ For any inquiries or support regarding the CareAfrica project, please contact us
 
 Thank you for your interest in the CareAfrica project!
 
-Link to the project https://careafrica.netlify.app/
+Link to the [CareAfrica Project](https://careafrica.netlify.app/)
